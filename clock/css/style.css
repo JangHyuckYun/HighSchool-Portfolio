@@ -1,0 +1,42 @@
+* {margin: 0; padding: 0; list-style: none; box-sizing: border-box;}
+.topC {top: 50%; transform: translateY(-50%);}
+.leftC {left: 50%; transform: translateX(-50%);}
+.inblock {display: inline-block;}
+.absolute {position: absolute;}
+.clcokCenter {width: 25px; height: 25px; background: none; top: 50%; left: 50%;}
+.hidden {display: none;}
+main {width: 100%; height: 100vh; position: relative; background: white;}
+.outside {width: 800px; height: 800px; background: white; border:13px solid #7b599d; border-radius: 50%; position: relative; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+.jum { width: 25px; height: 25px; background: #813051; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
+.needle {cursor: pointer; z-index: 9999;}
+.needle span {cursor: pointer; z-index: 9999; }
+
+.hour {transform: translate(-50%, -50%);}
+.hour span {width:12px; height: 17vh; background: rgba(129,48,81,0.5); position: relative; left: 50%; transform: translate(-50%,-78%);}
+
+.minute {transform: translate(-50%, -50%);}
+.minute span {width:12px; height: 30vh; background: rgba(129,48,81,0.7); position: relative; left: 50%; transform: translate(-50%,-85%); }
+
+.second {transform: translate(-50%, -50%);}
+.second span {width:2px; height: 35vh; background: rgba(129,48,81); position: relative; z-index: 999; left: 50%; transform: translate(-50%,-93%);}
+
+.time {width: 100%; height: 100%; border-radius: 50%; position: relative;}
+.time span {font-size: 80px; font-weight: 900; color:#9978ad; position: absolute; user-select: none;}
+.time span:first-child { top: 7%; right: 25%; }
+.time span:nth-child(2) { top: 22%; right: 11%; }
+.time span:nth-child(3) { right: 3%; }
+.time span:nth-child(4) { bottom: 22%; right: 11%; }
+.time span:nth-child(5) { bottom: 7%; right: 25%; }
+.time span:nth-child(6) { bottom: 0; }
+.time span:nth-child(7) { bottom: 7%; left: 25%; }
+.time span:nth-child(8) { bottom: 22%; left: 11%; }
+.time span:nth-child(9) { left: 3%; }
+.time span:nth-child(10) { top: 22%; left: 9%; font-size: 77px; }
+.time span:nth-child(11) { top: 7%; left: 23%; font-size: 77px;}
+.time span:last-child { top: 0; }
+
+.modifyPage {width: 300px; height: 100vh; position: fixed; right: 0; top: 0; text-align: center; padding: 30px; }
+.modifyPage input { width: 100%; height: 40px; }
+
+.nb {position: absolute; bottom: 10px; left: 10px;}
