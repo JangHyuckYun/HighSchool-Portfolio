@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400');
+*{overflow-x: hidden;margin: 0; padding: 0;font-family: "SF Pro KR", "SF Pro Display", "SF Pro Icons", "AOS Icons", "Apple Gothic", "HY Gulim", "MalgunGothic", "HY Dotum", "Lexi Gulim", "Helvetica Neue", "Helvetica", "Arial", sans-serif;  text-decoration: none; text-decoration: none; list-style: none; }
+body{background: #f2f2f2;}
+#wrap{width: 100%; height: 100%}
+#header{width: 100%; height: 44px; display: flex; justify-content: center; background: rgba(0,0,0,0.8); }
+.gnb{width: 1024px; height: 44px; display: flex; justify-content: center; align-items: center; }
+
+#menu{width: 1000px; height: 44px; display: flex; justify-content: space-between; }
+#menu li{width: auto; height: 44px; float: left; text-align: center; line-height: 44px; overflow-y: hidden;}
+#menu li a{color: white; font-size: 15px; }
+
+.content1{width: 100%; height: 362px; position: relative;}
+
+#main_text{text-align: center; width: 725px; height: 288px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+#main_text h1{font-size: 54px; letter-spacing: 0em; font-weight: bold; margin-top: 30px}
+#main_text p{font-size: 20px; margin-top: 35px; font-weight: 500}
+
+.content2{width: 100%; height: 2206px; position: relative;}
+.content2 .main_img1{width: 2560px; height: 1046px; position: absolute; left: 50%; transform: translate(-50%);}
+.content2 .main_img2{width: 2560px; height: 510px; position: absolute; left: 50%; top: 70%; transform: translate(-50%, -70%);}
+.content3{width: 100%; height: 2501px; position: relative;}
+.content3 .main_img3{width: 2560px; height: 1116px; position: absolute; left: 50%; transform: translate(-50%);}
+.content3 .main_img4{width: 2560px; height: 554px; position: absolute; left: 50%; top: 70%; transform: translate(-50%, -70%);}
+.content4{width: 100%; height: 1950px; position: relative;}
+.content4 .main_img5{width: 2560px; height: 1421px; position: absolute; left: 50%; transform: translate(-50%);}
+
+#info{width: 1200px; height: 1300px; z-index: 100; position: absolute; left: 55%; top: 75%;transform: translate(-55%, -75%);}
+.box{overflow-y: hidden; background: rgba(255,255,255,0.8); position: relative;transition: 0.5s; width: 350px; height: 400px; float: left; z-index: 100; margin-left: 10px; margin-top: 10px}
+
+.content2 > #info > .box:nth-child(1) {background: rgba(0,0,0,0);}
+.content2 > #info > .box:nth-child(6) {background: rgba(0,0,0,0);}
+.content2 > #info > .box:nth-child(7) {background: rgba(0,0,0,0);}
+
+.content3 > #info > .box:nth-child(1) {background: rgba(0,0,0,0);}
+.content3 > #info > .box:nth-child(6) {background: rgba(0,0,0,0);}
+.content3 > #info > .box:nth-child(7) {background: rgba(0,0,0,0);}
+.content3 > #info > .box:nth-child(8) {background: rgba(0,0,0,0);}
+.content3 > #info > .box:nth-child(9) {background: rgba(0,0,0,0);}
+
+.content4 > #info > .box:nth-child(1) {background: rgba(0,0,0,0);}
+.content4 > #info > .box:nth-child(2) {background: rgba(0,0,0,0);}
+.content4 > #info > .box:nth-child(6) {background: rgba(0,0,0,0);}
+.content4 > #info > .box:nth-child(7) {background: rgba(0,0,0,0);}
+
+.active{opacity: 0}
+.box img{position: absolute; left: 50%; top: 10%; transform: translate(-50%, -10%)}
+.box p{text-align: center; font-size: 15px; }
+.box p:nth-child(1) {margin-top: 270px}

@@ -1,9 +1,92 @@
-* {margin: 0; padding: 0; list-style: none; box-sizing: border-box; text-decoration: none;}
-body {padding-top: 50px;}
-.wrap {width: 100%; height: 100vh; position: relative;}
-.pText {width: 100%; height: 100px; position: absolute; text-align: center;}
-.pText p {font-size: 80px; font-family: 'Black Han Sans', sans-serif;}
+/* setting */
+@font-face{ 
+	font-family:'Oswald';
+	src:url('fonts/Oswald-Bold.ttf?#iefix');
+}
+@font-face {
+	font-family: 'Jua-Regular';
+	src: url('fonts/Jua-Regular.ttf'); 
+}
 
-main {width:80%; height: 80%; margin: 0 auto; position: relative; border:1px solid black; top: 50%; transform: translateY(-50%); padding: 50px; }
-.list {display: inline-block; width: 250px; height: 250px; user-select: none; box-shadow: 0px 0px 10px rgba(0,0,0,0.5); cursor: pointer; transition: 0.3s; text-align: center; line-height: 250px;}
- .list:hover {transform: scale(1.1); }
+::-webkit-scrollbar {
+	display: none;
+}
+
+* {margin: 0; padding: 0; list-style: none; text-decoration: none; color:white; font-family: "Oswald"; box-sizing: border-box;kljjk}
+.active:hover {width: 30vw; height: 30vw; cursor: pointer;}
+.center{width: calc(100vw - 10%); position: relative; margin: 0 auto;}
+.flex {display: flex;}
+.left {float: left;}
+.right {float: right;}
+.per-90 {width: 90%;}
+.per-100 {width: 100%;}
+input{ display: none; }
+p {font-family: 'Jua-Regular'; font-size: 20px;}
+.wrap {width: 100vw; height: 100vh; position: relative; top: 0; overflow: hidden;}
+
+/* header */
+.wrap header {width: 100%; height: 180px; position: fixed; z-index: 11; background: none;}
+.wrap header .wave {width: 130px; height: 130px; position: fixed; top: 5%; left: 5%;  transition: .5s; cursor: pointer;}
+.wrap header .wave h2 {position: absolute; z-index: 1; color:white; font-family: "Spicy"; text-align: center; user-select: none; margin-top: 20px;}
+.wrap .waves {width: 100%; height: 100%; background: #384dda; position: absolute; top: 0; border-radius: 41%; transform-origin: 50% 48%; opacity: .4;}
+.wrap .wave1 {animation:drift 3000ms linear infinite; }
+.wrap .wave2 {background: #44c8de; animation:drift 5000ms linear infinite; opacity: .2;}
+.wrap .wave3 { animation:drift 7000ms linear infinite;}
+.wrap header .menu { width:27vw; height: 100%; position: absolute; right: 5%;}
+.wrap header .menu ul {width: 100%; height: 100%; display: flex; justify-content: space-around; align-items: center;}
+.wrap header .menu ul li a{display: block; color:white;}
+
+/* main */
+main {width: 100%; height: 300%; position: relative;}
+main section {width: 100%; height: calc(100% / 3);  background: #ececec; top:0; z-index: 1; padding-top: 200px;}
+main section.home { background-image: url(../img/bg2.png); background-size: cover; background-repeat: no-repeat; display: flex; justify-content: center; align-items: center; }
+main section.home:after {content: ""; width: 100%; height: calc(100% / 3); background: rgba(0,0,0,.35); position:absolute; top: 0;left: 0;}
+main section.home .H_Box { z-index: 1; height: 100px; text-align: center; top: 18.5%; transform: translateY(-100%);}
+main section.home .H_Box p{ color:#ececec; font-size: 83px; animation:cursor .5s infinite;}
+p.typing-txt{display: none;}
+p.typing {padding: 10px;}
+
+main section.profile img{width: 8vw; height: 10vw; padding-right: 1vw; padding-bottom: 1vw;}
+main section.profile .flex {align-items: center;}
+main section.profile .right {width: 50%; height: 100%; position: relative;}
+main section.profile .right .awards {width: 100%; height: auto; border:1px solid black; padding: 5px;}
+
+main section.skills {background-image: url(../img/skillsBg.png); background-size: cover; background-repeat: none;}
+main section.skills .center{width: 70%; height: 100%; position: relative; z-index: 2; display: flex; justify-content: space-between;}
+main section.skills .center .txtBox{width: 50%; height: 100%; position: relative; padding-top: 60px;}
+main section.skills .center .txtBox > .skillBox {height: 45%;}
+main section.skills .center .txtBox > .skillBox > div{width: 100%; height: 70px; }
+main section.skills .center .txtBox > .skillBox > div > .bar {margin-top: 5px; width: 390px; height: 25px; position: relative; border:3px solid white; border-radius: 20px;}
+main section.skills .center .txtBox > .skillBox > div > .bar .per {height: 100%; position: relative; background: white; border-radius: 20px;}
+
+main section.skills .center .profile {width: 50%; height: 100%; padding: 60px 0px 0px 0px;}
+main section.skills .center .profile .p_box{padding-left: 20px;}
+main section.skills .center .profile img{width: 180px; height: 220px; box-shadow: 3px 3px 10px rgba(0,0,0,.1)}
+
+main section.projects {background-image: url(../img/skillsBg2.png); background-size: cover; background-repeat: none;}
+main section.projects .center{height: 100%;}
+main section.projects .center nav {width: 100%; height: 70px; position: relative;margin-bottom: 50px;}
+main section.projects .center nav ul {width: 50%; height: 100%; margin: 0 auto; display: flex; justify-content: space-around; border-radius: 15px; overflow: hidden; box-shadow: 0px 0px 20px rgba(255,255,255, .4)}
+main section.projects .center nav ul li {width:calc(100% / 3); height: 100%; user-select: none; text-align: center; line-height: 70px; background: #a0dae3; color:white;}
+main section.projects .center nav ul li a{ cursor: pointer; color:white;}
+main section.projects .center nav ul li label { cursor: pointer;}
+main section.projects .center .contents { width: 100%; margin: 0 auto; height: calc(100% - 200px); background: rgba(0,0,0,.2); overflow: scroll; overflow-x: hidden; box-shadow: 0px 0px 15px rgba(0,0,0,.2)}
+main section.projects .center .contents div {width: 100%; height: 350px; float: left; border-radius: 20px;}
+main section.projects .center .contents div img {width: 100%; height: 100%; transition: .5s; box-shadow: 0px 0px 10px rgba(0,0,0, .2);}
+main section.projects .center .contents > div {padding: 15px; display: flex;}
+main section.projects .center .contents div > div{ height: 100%; position: relative;}
+main section.projects .center .contents div > div:first-child{width: 40%; padding-right: 15px;}
+main section.projects .center .contents div > div:last-child{width: 60%; padding-top: 20px; line-height: 30px;}
+main section.projects .center .contents div > div:first-child a:hover > img{transform: scale(1.03); cursor: pointer;}
+
+.readme {padding-top: 10px;}
+@keyframes drift {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+
+@keyframes cursor{ 
+	0%{border-right: 1px solid #fff} 
+	50%{border-right: none;} 
+	100%{border-right: 1px solid #fff} 
+}

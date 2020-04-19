@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>원그래프</title>
+	<style>
+		* {margin: 0; padding: 0; box-sizing: border-box;}
+		canvas {position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+	</style>
+</head>
+<body>
+	<canvas id="myCvs"></canvas>
+	<script>
+		//setting
+		const
+		one = v => document.querySelector(v), 
+		cvs = document.querySelector("#myCvs");
+		cvs.width = 1200;
+		cvs.height = 600;
+
+		const
+		ctx = cvs.getContext("2d"),
+		cvsX = cvs.offsetWidth / 2,
+		cvsY = cvs.offsetHeight / 2,
+		color = ["red", "green", "blue","yellow", "purple", "orange", "red", "blue", "skyblue", "red"];
+		let ratio = [];
+
+		while( ratio.length != 10 ){
+			ratio.push( Math.floor( (Math.random()*(100-1+1))+1));
+		}
+		let m = ratio.reduce( (acc,v) => acc+v )/100;
+		ratio =  ratio.map( v => v/m );
+		console.log(ratio);
+		let
+		arr,
+		maxAngle = 0,
+		start = 1.5,
+		end = 1.5,
+		max = Math.max.apply(null, ratio);
+		console.log("max", max);
+			draw = (x, y, start, end, color) => { // 원 그리는 함수
+				ctx.fillStyle = color;
+				ctx.beginPath();
+				ctx.moveTo( x, y );
+				ctx.arc( x, y, 210, (start * Math.PI), (end * Math.PI), false);
+				ctx.lineTo(x, y);
+				ctx.fill();
+			}
+
+			init = _ => { // 처음 실행 함수
+				// arr = arrPush();
+				let arrAngle = 0;
+
+				for (let i = 0, len = ratio.length; i < len; i++) {
+					let res = 2 * ratio[i] / 100;
+					end = end + res;
+					arrAngle += (ratio[i] / 100 * 100) * (360 / 100);
+
+					if(ratio[i] == max && len != 1) {
+						maxAngle = arrAngle - ((max / 100 * 100) * (360 / 100) / 2);
+						// 일부값 ÷ 전체값 × 100
+						console.log();
+						let testX = cvsX + (Math.cos((90 + maxAngle) * Math.PI / 180)) * -15;
+						let testY = cvsY + (Math.sin((90 + maxAngle) * Math.PI / 180)) * -15;
+						draw(testX, testY, start, end, color[i])
+					}else {
+						draw(cvsX, cvsY, start, end, color[i]);
+					}
+
+					start = end;
+				}
+			}
+
+			window.onload = init();
+
+		</script>
+	</body>
+	</html>
+

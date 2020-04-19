@@ -1,0 +1,10 @@
+* { margin: 0; padding: 0; box-sizing: border-box; text-decoration: none;list-style: none;}
+html, body { width: 100%; height: 100%; font-family: "Malgun Gothic"; font-size: 16px; text-align: center;}
+.hl-key { color: #f00; font-weight: bold; }
+.autocomplete{width: 225.5px; background: rgba(0,0,0,0.5); position: relative; left:50%; transform: translateX(-50%);}
+.autocomplete>ul>li{display: block; cursor: pointer;}
+
+.autocomplete>ul>li>span{color:white; cursor: pointer;}
+.active{background: rgba(0,0,0,0.8);}
+.res{width: 350px;height: auto;border:3px solid black; position: relative; left:50%; transform: translateX(-50%);}
+.text-red{color:red;}
