@@ -1,0 +1,5 @@
+* {margin: 1px; padding: 0;}
+#myCvs {border:1px solid black; position: absolute; left: 50%; transform: translateX(-50%);}
+
+#test {width: 100px; height: 30px; border:1px solid black; cursor: pointer; color:black;}
+.box { position: absolute; top: 0; left: 0; border:1px solid black; z-index: 100;}

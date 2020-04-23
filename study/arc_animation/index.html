@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<canvas id="myCvs" style="border:1px solid black;"></canvas>
+
+
+	<script>
+		// setting
+		let cvs = document.querySelector("#myCvs");
+		cvs.width = 1200;
+		cvs.height = 600;
+
+		let 
+		ctx = cvs.getContext("2d"),
+		res = -0.5, 
+		radius = 250,
+		endPoint = -0.5,
+		startPoint = -0.5,
+		cvsX = cvs.offsetWidth / 2,
+		cvsY = cvs.offsetHeight / 2;
+
+		addText = (txt = "Example", fStyle = "25px Arial") => {
+			ctx.font = fStyle;
+			ctx.fillStyle = "black";
+			ctx.fillText(txt, (cvsX - 50), (cvsY * 2) - 15);
+		}
+
+		arcAnimation = _ => { // 원그래프 애니메이션
+			if(res >= 1.51) return cancelAnimationFrame(arcAnimation);
+
+			ctx.fillStyle = "#9CFFF3";
+			if(res > -0.1 && res <= 0.5) {
+				startPoint = -0.1;
+				ctx.fillStyle = "#8EE8C4";
+			}else if(res >= 0.5){
+				startPoint = 0.5;
+				ctx.fillStyle = "#A8FFC4";
+			}
+
+			ctx.beginPath();
+			ctx.moveTo(cvsX, cvsY);
+			ctx.arc(cvsX, cvsY, radius, startPoint * Math.PI, endPoint * Math.PI, false);
+			ctx.lineTo(cvsX,cvsY);
+			ctx.fill();
+
+			endPoint += 0.01;
+			res = endPoint.toFixed(2);
+			requestAnimationFrame(arcAnimation);
+		}
+
+		requestAnimationFrame(arcAnimation); // 원 그래프 애니메이션 실행 함수
+
+		addText("원 그래프");
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>아날로그 시계</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<main class="clock">
+		<div class="btn_box">
+			<button type="button" class="start" onclick="start();">시작</button>
+			<button type="button" onclick="stop(); ">일시정지</button>
+			<button type="button" onclick="modify();" class="modify">수정</button>
+			<button type="button" onclick="nowTime();" class="nowTime">현재시간으로<br>(움직일때만)</button>
+		</div>
+		<section class="outside">
+			<span class="jum inblock absolute"></span>
+			<div class="needle hour absolute clcokCenter"><span class="inblock"></span></div>
+			<div class="needle minute absolute clcokCenter"><span class="inblock"></span></div>
+			<div class="needle second absolute clcokCenter"><span class="inblock"></span></div>
+			<div class="time">
+				<span>1</span>
+				<span>2</span>
+				<span class="topC">3</span>
+				<span>4</span>
+				<span>5</span>
+				<span class="leftC">6</span>
+				<span>7</span>
+				<span>8</span>
+				<span class="topC">9</span>
+				<span>10</span>
+				<span>11</span>
+				<span class="leftC">12</span>
+			</div>
+		</section>
+		<section class="modifyPage hidden">
+			<p>시간</p>
+			<input type="number" class="val" name="hour" placeholder="Enter Hour" maxlength="2" min="0" oninput="numberMaxLength(this);">
+			<p>분</p>
+			<input type="number" class="val" name="minute" placeholder="Enter Minute" maxlength="2" min="0" oninput="numberMaxLength(this);">
+			<p>초</p>
+			<input type="number" class="val" name="second" placeholder="Enter Second" maxlength="2" min="0" oninput="numberMaxLength(this);">
+			<p>a.m / p.m</p>
+			<select class="nbCheck">
+				<option value="a.m">a.m</option>
+				<option value="p.m">p.m</option>
+			</select>
+		</section>
+		<div class="nb">
+			<p>현재시간: <span class="h"></span>시 
+				<span class="m"></span>분
+				<span class="s"></span>초 
+				<br>오전/오후: <span class="ap"></span>
+			</p>
+		</div>
+	</main>
+
+	<script src="js/app.js"></script>
+</body>
+</html>

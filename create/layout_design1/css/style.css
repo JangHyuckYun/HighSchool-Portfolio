@@ -1,0 +1,51 @@
+
+/* latin */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/oswald/v29/TK3iWkUHHAIjg752GT8G.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* setting */
+*{margin: 0;padding: 0;list-style: none;box-sizing: border-box;}
+.left{float: left;}
+.right{float: right;}
+.tac{text-align: center;}
+.rel{position: relative; z-index: 4;}
+.t30 {top: 30%;}
+.wrap {width: 100%; height: 100vh; position: relative; overflow: hidden;}
+
+/* .wrap > header */
+header{width:calc(100% - 8%); height: 74px; position: absolute; z-index: 101; top: 60px; left:50%; transform: translateX(-50%); display: flex; justify-content: space-between; line-height: 74px;}
+header .logo {width: 50%; height: 100%;}
+header .logo img{width: 18%;height: 100%;}
+
+header .menu {width: 30%; height: 100%;}
+header .menu ul{display: flex; justify-content: space-between;}
+header .menu ul li {width:calc(100% / 6); height: 100%;}
+header .menu ul li a{text-decoration: none; color: #919083; display: block; margin: 0 .618em; padding: .618em 0; font-family: Oswald,sans-serif;font-weight: 600;font-style: italic;font-size: 17px;letter-spacing: .05em;text-transform: lowercase;}
+
+/* .wrap > main */
+main{width: 100%; height: 100%; position: relative;}
+main section.home-1 {width: 100%; height: 100vh;}
+main section.home-1 .home-1-box { height: 130%; position: relative;}
+main section.home-1 .home-1-box:first-child {width:44%; background: rgba(61,61,61);}
+main section.home-1 .home-1-box:last-child {width:56%; background: white;}
+main section.home-1 .home-1-box .imgBox {width: 100%; height: 908px; position: relative; top: 18%; left: 10%; z-index: 100;}
+main section.home-1 .home-1-box .imgBox img {width: 100%;height: 100%;}
+main section.home-1 .home-1-box .home-1-textBox {width:53%; height: auto; display: flex; justify-content: flex-start; flex-wrap: wrap; align-content: center; position: relative; top: 50%;left: 50%;  transform: translate(-50%,-100%);}
+main section.home-1 .home-1-box .home-1-textBox h1 {font-size: 58px; color: #3d3d3d; font-family: 'Prata', serif; font-weight: 600; font-style: normal; letter-spacing: 0em; line-height: .75em; text-transform: none;}
+main section.home-1 .home-1-box .home-1-textBox>p {padding: 23px 0px; line-height: 30px;}
+main section.home-1 .home-1-box .home-1-textBox a {display: inline-block; width: 162px; height: 46px; background: red; text-align: center; transition: 0.5s; line-height: 46px; text-decoration: none; background: #3d3d3d; color:white; font-size: 15px;}
+main section.home-1 .home-1-box .home-1-textBox a:hover { opacity: 0.75; }
+
+.test{width: 30px;height: auto; writing-mode: vertical-rl; text-orientation: mixed; display: flex; transform: rotate(180deg); position: fixed; top: 50%; left: 1%; color:white; font-size: 36px; z-index: 3;}
+.test span {display: inline-block; width: 5px; height: 500px; background: white; position: relative; right: 65%; bottom: 2%;}
+
+main section.home-2 {width: 100%; height: 433px;}
+main section.home-2 p { width: 1124px; height: 102px; margin: 0 auto; line-height: 433px; }
+
+

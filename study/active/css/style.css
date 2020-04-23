@@ -1,0 +1,14 @@
+*{margin: 0;padding: 0;}
+html,body{width: 100%;height: 100%;}
+#wrap{width: 100%;height: 100%;}
+#boxwrap{width: 1320px;height: 240px;margin: 0 auto;}
+#boxwrap div{width: 300px;height: 200px;float: left;margin: 20px 0 20px 20px;position: relative;
+	cursor: pointer;transition: 0.5s;box-sizing: border-box;}
+
+.box1{background: #FF4040;opacity: 0.5;}
+.box2{background: #5C5CFE;opacity: 0.5;}
+.box3{background: #40FF67;opacity: 0.5;}
+.box4{background: #E63EE6;opacity: 0.5;}
+
+.box:hover{opacity: 1;transform: scale(1.1);}
+.box:active{background: black;transform: translateY(200px);}

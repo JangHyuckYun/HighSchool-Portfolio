@@ -1,0 +1,13 @@
+@charset 'UTF-8';
+* {margin: 0; padding: 0;}
+#wrap {width: 800px; height: 500px; margin: 0 auto;}
+
+#cvr {width: 600px; height: 500px; overflow: hidden; margin: 0 auto; position: relative;}
+
+#cvr > ul {width: 500%; height: 500px;}
+#cvr > ul > li {width: 600px; height: 500px; list-style: none; float: left; text-align: center; color: white; font-size: 20px; line-height: 500px;}
+#cvr > ul > li:nth-child(1) {background: #FFADC5;}
+#cvr > ul > li:nth-child(2) {background: #BBF3B8;}
+#cvr > ul > li:nth-child(3) {background: #CCD1FF;}
+#cvr > ul > li:nth-child(4) {background: #FFDDA6;}
+#cvr > ul > li:nth-child(5) {background: #FFCCCC;}

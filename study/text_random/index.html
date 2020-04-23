@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>색깔랜덤</title>
+	<style>
+		*{margin: 0;padding: 0;list-style: none;box-sizing: border-box;}
+		html,body{width: 100%;height: 100%; transition: 0.9s;background: #94F9D7;}
+		h1{text-align: center;position: relative;top:calc(40% - 100px);font-size: 75px;color:white;}
+		h3{position: absolute;left:calc(98% - 150px);top:calc(99% - 100px);}
+		h3>a{color:white;font-size: 30px;text-decoration: none;transition: 0.9s;}
+	
+	</style>
+</head>
+<body>
+	<h1></h1>
+	<script src="../jquery-1.8.3.min.js"></script>
+	<script>
+		window.onload = function(){
+			const text = "Radom Color";
+			let bool = true, i = 0;
+
+			setInterval(function(){
+				ran_color = String("#"+Math.round(Math.random() * 0xFFFFFF).toString(16));
+				ran_color2 = String("#"+Math.round(Math.random() * 0xFFFFFF).toString(16));
+				$('body').css({background:ran_color});
+				$('h3>a').css({color:ran_color2});
+			},900);
+
+			setInterval(function(){// 무한 글씨
+				if(bool){
+					if(i >= text.length) return bool = false;
+					i++;
+				}else {
+					if(i == 0) return bool = true;
+					i--;
+				}
+
+				res = text.substr(0, i);
+				$("h1").text(res);
+			}, 150);
+		}
+	</script>
+
+
+
+	<script></script>
+</body>
+</html>

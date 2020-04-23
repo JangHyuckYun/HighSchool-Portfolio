@@ -1,0 +1,9 @@
+*{margin:0;padding: 0;box-sizing: border-box;font-family: sans-serif;box-sizing: border-box;}
+html,body,#app{width: 100%;height: 100%;}
+li{list-style: none;}
+#item1{width: 100%;height: 100%;}
+#item1>li{width: 100%;height: 100%;float: left;}
+
+nav>#item2{position: fixed;top: 0;right:25px;}
+nav>#item2>li{width: 17px;height: 17px;border-radius: 50%;border:1px solid #fff;margin:5px 0;}
+.focus{background:#fff;}

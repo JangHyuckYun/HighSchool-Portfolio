@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Two 내가만든것</title>
+	<style>
+		*{margin: 0;padding: 0;list-style: none;box-sizing: border-box;}
+	body{background-color: #000;}
+		.box{width: 600px;height: 350px;background: linear-gradient(0deg,#000,#262626);margin: 200px auto; position:relative;
+			transition: .5s;}
+		.box:before,
+		.box:after{
+			content: '';
+			position: absolute;
+			left:-2px;
+			top:-2px;
+			z-index: -1;
+			width: calc(100% + 4px);
+			height:calc(100% + 4px);
+			background: linear-gradient(to right,#fb0094,#0000ff,#00ff00,#ffff00,
+		    #ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
+			background-size: 1600%;
+			animation:ddd 20s linear infinite;
+		}
+		.box:after{filter: blur(20px)}
+		@keyframes ddd{
+			0%{background-position: 0 0;}
+			50%{background-position: 300% 0;}
+			100%{background-position: 0 0;}
+		}
+		button:active{visibility: visible;}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	
+</body>
+</html>

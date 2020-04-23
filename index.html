@@ -2,197 +2,69 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Layout1</title>
+	<title>Design</title>
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="wrap">
-		<header>
-			<!-- logo -->
-			<div class="wave active">
-				<h2>JH`s Portfolio</h2>
-				<div class="waves wave1"></div>
-				<div class="waves wave2"></div>
-				<div class="waves wave3"></div>
+	<div class="wrap relative">
+		<header class="relative">
+			<div class="center flex">
+				<div class="logo flexCen">
+					<img src="imgs/logo5.png" alt="로고">
+				</div>
+				<div class="head-menu">
+					<ul>
+						<li><a href="#!" id="projectClk">Projects <span></span></a></li>
+						<li><a href="#!" id="aboutClk">aboutMe<span></span></a></li>
+					</ul>
+				</div>
 			</div>
-
-			<!-- menu -->
-			<nav class="menu">
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Profile</a></li>
-					<li><a href="#">Projects</a></li>
-				</ul>
-			</nav>
 		</header>
-		<main>
-			<section class="home">
-				<div class="H_Box">
-					<p class="typing-txt">Welcome to JH`s Portfolio!!</p>
-					<p class="typing"></p>
+		<main class="relative">
+			<section class="come relative" id="come">
+				<div class="center relative">
+					<div class="box relative">
+						<h1>Welcome to <br>JH`s Portfolio!!</h1>
+					</div>
 				</div>
 			</section>
-			<section class="skills">
-				<div class="center">
-					<div class="profile">
-						<h1>Profile</h1>
-						<div class="flex">
-							<img src="img/myFace.jpg" alt="증명사진">
-							<div class="p_box">
-								<br>
-								<p>이름: <b>윤장혁</b></p>
-								<p>생일: 2002.08.20</p>
-								<p>이메일: skg09203@naver.com</p>
-								<p>전화번호: <br>010-6473-5261</p>
-							</div>
+			<section class="about relative" id="about">
+				<div class="arc" id="arcAbout"></div>
+				<div class="center relative">
+					<div class="flex relative">
+						<div class="img-box">
+							<img src="imgs/icon1.png" alt="">
 						</div>
-						<br>
-						<br>
-						<div class="awards">
-							<h1>Activities</h1>
-							<p>2018.11.12 ~ 2018.11.13 흡연예방 공모전 우수(3위)</p>
-							<p>2018.12 ~ 2018.12 공간정보 웹,앱 경진대회 우수(3위)</p>
-							<p>2019.04.03 ~ 2019.04.06 지방기능경기대회 장려상</p>
-							<p>2019.11.28 ~ 2019.11.29 AI Week Korea 2019 -인공지능 챗봇톤 장려상</p>
-							<p>2019.12 ~ 2019.12.06 공간정보 웹,앱 경진대회 최우수(2위)</p>
-						</div>
-					</div>
-					<div class="txtBox">
-						<div class="skillBox">
-							<h1>SKILLS</h1>
-							<div class="box">
-								<p>Java 100%</p>
-								<div class="bar">
-									<div class="per per-100"></div>
-								</div>
-							</div>
-							<div class="box">
-								<p>Front-end(HTML, CSS, js, jQuery) 100%</p>
-								<div class="bar">
-									<div class="per per-100"></div>
-								</div>
-							</div>
-							<div class="box">
-								<p>Back-end(phpMyAdmin, MySQL) 100%</p>
-								<div class="bar">
-									<div class="per per-100"></div>
-								</div>
-							</div>
-						</div>
-						<div>
-							<h1>-목표-</h1>
-							<p>자기 일에 포기하지 않고 끊임없이 도전하여 성취할 것입니다.</p>
+						<div class="p-box">
+							<h1>ABOUT ME</h1>
+							<p>제가 가장 중요하게 생각하는 것 중 하나는 <b>'관심'</b> 입니다.</p>
+							<p>무엇이든 <b>'관심'</b> 이 없다면 할 의욕도 없을뿐더러 </p>
+							<p>이른 시간 안에 끝내야 하는 일도 못 할 수 있기 때문입니다. </p>
+							<p>저는 제가 무언가를 창작한다는 것과 문제를 풀어나가는 것에 예전부터 <b>'관심'</b>이 있었습니다.</p>
+							<p>웹으로 자신만의 사이트를 만들고 대회 문제를 풀어나가면서 성취감을 느끼고 있습니다. </p>
+							<p>만약 웹뿐만이 아닌 다른 언어를 통해 만들 기회를 주신다면 주저하지 않고 배워서 성장해나가는</p>
+							<p>인재가 되겠습니다.</p>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="projects">
-				<div class="center">
-					<nav class="pro">
-						<ul>
-							<li><a href="#!" data-txt="all">ALL</a></li>
-							<li><a href="#!" data-txt="contest">Contest_Problems</a></li>
-							<li><a href="#!" data-txt="algorithm">Algorithm</a></li>
-							<li><a href="#!" data-txt="create">Created_Sites</a></li>
+			<section class="projects relative" id="projects">
+				<div class="arc" id="arcPro"></div>
+				<div class="center relative">
+					<input type="radio" name="pos" id="pos1" checked>
+					<input type="radio" name="pos" id="pos2">
+					<input type="radio" name="pos" id="pos3">
+					<h1>My Projects</h1>
+					<nav class="pro-menu relative">
+						<ul class="relative">
+							<li><label for="pos1" data-txt="cre">Created-Site</label></li>
+							<li><label for="pos2" data-txt="contest">Contest-Problem</label></li>
+							<li><label for="pos3" data-txt="study">Javascript-Study</label></li>
 						</ul>
 					</nav>
-					<div class="contents">
-						<div class="all create">
-							<div class="img">
-								<a href="create/tobacco_contest/index.html" target="_blank">
-									<img src="./img/projects/tobacco_contest.png" alt="담배공모전 사이트 디자인">
-								</a>
-							</div>
-							<div class="right">
-								<p>이름: 담배공모전 사이트</p>
-								<p>제작 소요기간: 약 1~4시간</p>
-								<p>참여율: 100%</p>
-								<p>설명: 금연을 왜 해야하는지 재흡연을 했을시의 대처법(영상) 등 <br>금연 유도 사이트 입니다.</p>
-								<br>
-								<p>사용한 언어: HTML, CSS, Javascript</p>
-							</div>
-						</div>
-
-						<div class="all create">
-							<div class="img">
-								<a href="create/apple/index.html" target="_blank">
-									<img src="/img/projects/apple.PNG" alt="애플사이트 모방">
-								</a>
-							</div>
-							<div>
-								<p>이름: 애플사이트</p>
-								<p>제작 소요기간: 약 4~6시간</p>
-								<p>참여율: 100%</p>
-								<p>설명: 애플사이트를 따라 디자인 하였습니다. <br>(메뉴바에 Apple만 이동 가능합니다.)</p>
-								<br>
-								<p>사용한 언어: HTML, CSS, Javascript</p>
-							</div>
-						</div>
-
-						<div class="all create">
-							<div class="img">
-								<a href="create/todos/index.html" target="_blank">
-									<img src="/img/projects/todos.PNG" alt="Todos 사이트 모방">
-								</a>
-							</div>
-							<div>
-								<p>이름: Todos</p>
-								<p>제작 소요기간: 약 2~4시간</p>
-								<p>참여율: 100%</p>
-								<p>설명: 입력란에 할 일들을 적어 넣을 수 있습니다. 다 한 일들은 체크를 통해 구별 가능하고 삭제할 수 있습니다.</p>
-								<br>
-								<p>사용한 언어: HTML, CSS, Javascript</p>
-							</div>
-						</div>
-						<div class="all contest">
-							<div class="img">
-								<a href="contest/subway/index.html" target="_blank">
-									<img src="img/projects/subway.png" alt="제51회 전국기능경기대회 지하철">
-								</a>
-							</div>
-							<div>
-								<p>이름: 제51회 전국기능경기대회 지하철</p>
-								<p>제작 소요기간: 약 일주일</p>
-								<p>참여율: 100%</p>
-								<p>설명: 지하철 검색 엔진을 만들었습니다. 검색하면 검색한 내용이 포함된 역 10개를 리스트로 표시 후<br> 리스트를 클릭하면 아래 검색된 시간과 결과가 나옵니다.</p>
-								<br>
-								<p>사용한 언어: CSS, Javascript (HTML, CSS 기본제공)</p>
-							</div>
-						</div>
-						<div class="all algorithm">
-							<div class="img">
-								<a href="algorithm/clock/index.html" target="_blank">
-									<img src="img/projects/clock.png" alt="시계만들기">
-								</a>
-							</div>
-							<div class="right">
-								<p>이름: 시계만들기</p>
-								<p>제작 소요기간: 약 1~2시간</p>
-								<p>참여율: 100%</p>
-								<p>설명: 시계기능 + 시간을 수정할 수 있는 기능을 구현하였습니다.</p>
-								<br>
-								<p>사용한 언어: HTML, CSS, Javascript</p>
-							</div>
-						</div>
-						<div class="all algorithm">
-							<div class="img">
-								<a href="algorithm/arc/index.html" target="_blank">
-									<img src="img/projects/arc.png" alt="원그래프">
-								</a>
-							</div>
-							<div class="right">
-								<p>이름: 원그래프 기능 구현</p>
-								<p>제작 소요기간: 약 1~2시간</p>
-								<p>참여율: 100%</p>
-								<p>설명: 랜덤으로 값을 지정한 후 그중 가장 큰 값만 띄어지게 만드는 기능입니다.</p>
-								<br>
-								<p>사용한 언어: HTML, CSS, Javascript</p>
-							</div>
-						</div>
-					</div>
-					<p class="readme">※자세한 내용은 이미지를 클릭하여 주세요.</p>
-				</div>
+					<div class="contents relative flex"></div>
+				</div>	
 			</section>
 		</main>
 	</div>

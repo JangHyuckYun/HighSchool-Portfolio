@@ -1,0 +1,13 @@
+#cvr > input{position: absolute; bottom: 5px; width: 14px; height: 14px;}
+
+#one {left: 250px;} 
+#two {left: 270px;}
+#three {left: 290px;}
+#four {left: 310px;}
+#five {left: 330px;}
+
+#one:checked ~ul {margin-left: 0px; transition: 1s;}
+#two:checked  ~ul{margin-left: -600px; transition: 1s;}
+#three:checked  ~ul{margin-left: -1200px; transition: 1s;}
+#four:checked  ~ul{margin-left: -1800px; transition: 1s;}
+#five:checked  ~ul{margin-left: -2400px; transition: 1s;}
